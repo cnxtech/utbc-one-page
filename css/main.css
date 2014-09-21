@@ -1,0 +1,354 @@
+body {
+  margin-top: 139px;
+  min-width: 768px;
+  font-family: 'Open Sans', 'Helvetica', 'San Serif';
+}
+
+footer {
+  margin: 0;
+  padding: 20px;
+  background-color: #333;
+  text-align: center;
+}
+
+footer .disclaimer {
+  color: #bbb;
+  font-family: Arial, Verdana, Helvetica, San Serif;
+  font-size: 9px;
+  display:block;
+  width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.tooltip-inner {
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.main-header {
+  position: absolute;
+  height: 125px;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.main-header h2 {
+  margin-bottom: 35px;
+}
+
+.outer {
+  width: 100%;
+  padding: 10px 0;
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow:    0px 10px 15px 0px rgba(0, 0, 0, 0.6);
+  box-shadow:         0px 10px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.inner {
+  width: 957px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.brand img {
+  width: 220px;
+}
+
+#social-facebook {
+  margin-top: -5px;
+  width: 35px;
+}
+
+.main-header nav {
+  float: right;
+  margin-top: 44px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #4a4f52;
+}
+
+
+.main-header nav span {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 22px;
+}
+
+#who_are_we_link {
+  border-right: none;
+  margin-right: 25px;
+}
+
+.main-header nav span:hover {
+  color: #898d8f;
+  cursor: default;
+}
+
+section {
+  padding: 50px 0;
+  overflow: hidden;
+  color: #eee;
+}
+
+section h2 {
+  padding-bottom: 10px;
+}
+
+section .content {
+  width: 48%;
+}
+
+section .data {
+  width: 38%;
+}
+
+/* ==========================================================================
+ *  Court Hours Section
+ * ========================================================================== */
+
+#court_hours {
+  padding: 50px 0;
+  background: #100f17;
+  background-image: -webkit-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image: -moz-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image: -o-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image: -ms-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image: radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+}
+
+#court_hours h2 {
+  text-align: center;
+}
+
+#court_hours .container {
+  width: 957px;
+  margin: 0 auto;
+}
+
+#court_hours .timetable {
+  margin-top: 20px;
+}
+
+#court_hours .timetable .tt-times,
+#court_hours .timetable .tt-days {
+  color: #333;
+}
+
+/* ==========================================================================
+ *  Membership Section
+ * ========================================================================== */
+
+section#membership {
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 0;
+  background-color: #3b2550;
+  background-image: -webkit-linear-gradient(295deg,#574185,#281938);
+  background-image: -moz-linear-gradient(295deg,#574185,#281938);
+  background-image: -o-linear-gradient(295deg,#574185,#281938);
+  background-image: -ms-linear-gradient(295deg,#574185,#281938);
+  background-image: linear-gradient(-205deg,#574185,#281938);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+  color: #cabcd8;
+  text-shadow: 0 1px 2px #281938;
+}
+
+section#membership .content {
+  margin-bottom: 25px;
+}
+
+section#membership .content,
+section#membership .data {
+  width: 100%;
+}
+
+.feature_wrapper {
+  position: relative;
+  margin-top: 15px;
+  left: 40px;
+}
+
+.membership_feature {
+  position: relative;
+  float: left;
+  text-align: right;
+  width: 45%;
+}
+
+.membership_feature i {
+  font-size: 35px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.membership_feature_wrapper {
+  display: inline-block;
+  text-align: left;
+  width: 85%;
+}
+
+#feature_string_service {
+  clear: both;
+}
+
+.membership_feature h3 {
+  color: #fff;
+  font-size: 18px;
+}
+
+section#membership .data {
+  clear: both;
+  margin-top: 300px;
+  margin-bottom: -90px;
+}
+
+#card_wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
+
+#membership_card {
+  width: 400px;
+}
+
+/* ==========================================================================
+ *  Who Are We Section
+ * ========================================================================== */
+
+section#who_are_we {
+  background-color: #e4e8f2;
+  text-align: center;
+  color: #5b698a;
+}
+
+section#who_are_we h2 {
+  color: #24314f;
+}
+
+section#who_are_we .content {
+  width: 100%;
+}
+
+.team_wrapper {
+  margin-top: 30px;
+}
+
+.team_member {
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  border-radius: 110px;
+  -webkit-border-radius: 110px;
+  -moz-border-radius: 110px;
+  margin: 5px;
+}
+
+.team_member_name_wrapper {
+  margin-top: 185px;
+}
+
+.team_member_name {
+  color: #fff;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#anita {
+  background: url(../img/anita.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#edgar {
+  background: url(../img/edgar.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#bill {
+  background: url(../img/bill.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#daniel {
+  background: url(../img/daniel.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#joyce {
+  background: url(../img/joyce.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#william {
+  background: url(../img/william.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#shan {
+  background: url(../img/shan.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#shan {
+  background: url(../img/shan.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#wendy {
+  background: url(../img/wendy.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#fay {
+  background: url(../img/fay.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#shuang {
+  background: url(../img/shuang.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+#esther {
+  background: url(../img/esther.jpg) no-repeat center;
+  background-size: 220px 220px;
+}
+
+/* ==========================================================================
+ *  Sponsors Section
+ * ========================================================================== */
+
+section#sponsors {
+  padding: 10px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+#lining {
+  width: 170px;
+  margin-right: 40px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+#brownsports {
+  width: 180px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
