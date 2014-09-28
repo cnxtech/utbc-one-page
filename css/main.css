@@ -1,272 +1,288 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
 body {
-  margin-top: 139px;
+  font-family: Open Sans, Helvetica, San Serif;
   min-width: 768px;
-  font-family: 'Open Sans', 'Helvetica', 'San Serif';
+  margin-top: 139px;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section {
+  overflow: hidden;
+  padding: 50px 0;
+  color: #eee;
+}
+
+section h1 {
+  padding-bottom: 10px;
+}
+
+section .text {
+  width: 48%;
+}
+
+.tooltip-inner {
+  max-width: 250px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.inner-col {
+  overflow: hidden;
+  width: 952px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.main-header {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .6);
+     -moz-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .6);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .6);
+}
+
+.main-header h1 {
+  margin-bottom: 35px;
+}
+
+img.brand {
+  float: left;
+  width: 220px;
+}
+
+.main-header .facebook {
+  float: right;
+  margin-top: 44px;
+  margin-right: 20px;
+}
+
+.social-facebook {
+  width: 35px;
+  margin-top: -5px;
+}
+
+.main-header nav {
+  font-size: 24px;
+  font-weight: 400;
+  float: right;
+  margin-top: 44px;
+  color: #4a4f52;
+}
+
+.main-header nav a {
+  padding: 0 22px;
+  border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.main-header nav a:last-child {
+  margin-right: 25px;
+  border-right: none;
+}
+
+.main-header nav a:hover {
+  cursor: default;
+  color: #898d8f;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 footer {
   margin: 0;
   padding: 20px;
-  background-color: #333;
   text-align: center;
+  background-color: #333;
 }
 
 footer .disclaimer {
-  color: #bbb;
   font-family: Arial, Verdana, Helvetica, San Serif;
   font-size: 9px;
-  display:block;
+  display: block;
   width: 800px;
   margin: 0 auto;
-}
-
-h2 {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-.tooltip-inner {
-  white-space: nowrap;
-  padding: 10px;
-}
-
-.main-header {
-  position: absolute;
-  height: 125px;
-  width: 100%;
-  top: 0;
-  z-index: 999;
-}
-
-.main-header h2 {
-  margin-bottom: 35px;
-}
-
-.outer {
-  width: 100%;
-  padding: 10px 0;
-  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow:    0px 10px 15px 0px rgba(0, 0, 0, 0.6);
-  box-shadow:         0px 10px 15px 0px rgba(0, 0, 0, 0.6);
-}
-
-.inner {
-  width: 957px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.brand img {
-  width: 220px;
-}
-
-#social-facebook {
-  margin-top: -5px;
-  width: 35px;
-}
-
-.main-header nav {
-  float: right;
-  margin-top: 44px;
-  font-size: 24px;
-  font-weight: 400;
-  color: #4a4f52;
-}
-
-
-.main-header nav span {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0 22px;
-}
-
-#who_are_we_link {
-  border-right: none;
-  margin-right: 25px;
-}
-
-.main-header nav span:hover {
-  color: #898d8f;
-  cursor: default;
-}
-
-section {
-  padding: 50px 0;
-  overflow: hidden;
-  color: #eee;
-}
-
-section h2 {
-  padding-bottom: 10px;
-}
-
-section .content {
-  width: 48%;
-}
-
-section .data {
-  width: 38%;
+  color: #bbb;
 }
 
 /* ==========================================================================
- *  Court Hours Section
- * ========================================================================== */
+   Timetable
+   ========================================================================== */
 
-#court_hours {
+.timetable {
   padding: 50px 0;
   background: #100f17;
   background-image: -webkit-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
-  background-image: -moz-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
-  background-image: -o-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
-  background-image: -ms-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
-  background-image: radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image:    -moz-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image:      -o-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image:     -ms-radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
+  background-image:         radial-gradient(circle farthest-side at right bottom,#100f17,#302f40 80%,#1f1e2b);
 }
 
-#court_hours h2 {
+.timetable h1 {
   text-align: center;
 }
 
-#court_hours .container {
-  width: 957px;
-  margin: 0 auto;
-}
-
-#court_hours .timetable {
+.timetable .js-timetable {
   margin-top: 20px;
 }
 
-#court_hours .timetable .tt-times,
-#court_hours .timetable .tt-days {
+.timetable .js-timetable .times,
+.timetable .js-timetable .days {
   color: #333;
 }
 
 /* ==========================================================================
- *  Membership Section
- * ========================================================================== */
+   Membership
+   ========================================================================== */
 
-section#membership {
-  text-align: center;
+section.membership {
+  position: relative;
   overflow: hidden;
-  padding-bottom: 0;
+  padding-bottom: 260px;
+  text-align: center;
+  color: #cabcd8;
   background-color: #3b2550;
   background-image: -webkit-linear-gradient(295deg,#574185,#281938);
-  background-image: -moz-linear-gradient(295deg,#574185,#281938);
-  background-image: -o-linear-gradient(295deg,#574185,#281938);
-  background-image: -ms-linear-gradient(295deg,#574185,#281938);
-  background-image: linear-gradient(-205deg,#574185,#281938);
-  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
-  box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
-  color: #cabcd8;
+  background-image:    -moz-linear-gradient(295deg,#574185,#281938);
+  background-image:      -o-linear-gradient(295deg,#574185,#281938);
+  background-image:     -ms-linear-gradient(295deg,#574185,#281938);
+  background-image:         linear-gradient(-205deg,#574185,#281938);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+          box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
   text-shadow: 0 1px 2px #281938;
 }
 
-section#membership .content {
+section.membership .text {
   margin-bottom: 25px;
 }
 
-section#membership .content,
-section#membership .data {
+section.membership .text {
   width: 100%;
 }
 
-.feature_wrapper {
-  position: relative;
-  margin-top: 15px;
+.benefits {
   left: 40px;
+  overflow: visible;
+  margin-top: 15px;
+  text-align: center;
 }
 
-.membership_feature {
+.benefits li {
   position: relative;
-  float: left;
-  text-align: right;
-  width: 45%;
+  display: inline-block;
+  width: 35%;
+  margin-left: 50px;
+  text-align: left;
+  vertical-align: top;
 }
 
-.membership_feature i {
+.benefits li i {
   font-size: 35px;
   position: absolute;
-  left: 20px;
   top: 20px;
+  left: -50px;
 }
 
-.membership_feature_wrapper {
-  display: inline-block;
-  text-align: left;
-  width: 85%;
-}
-
-#feature_string_service {
-  clear: both;
-}
-
-.membership_feature h3 {
-  color: #fff;
+.benefits li h3 {
   font-size: 18px;
+  color: #fff;
 }
 
-section#membership .data {
-  clear: both;
-  margin-top: 300px;
-  margin-bottom: -90px;
-}
-
-#card_wrapper {
-  position: relative;
+.membership .card {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+  left: 0;
   display: inline-block;
+  width: 420px;
+  margin: 0 auto;
   padding: 10px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, .3);
   -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  background-color: #fff;
 }
 
-#membership_card {
+.membership .card img {
   width: 400px;
 }
 
 /* ==========================================================================
- *  Who Are We Section
- * ========================================================================== */
+   Meet the Team
+   ========================================================================== */
 
-section#who_are_we {
-  background-color: #e4e8f2;
+section.meet-the-team {
   text-align: center;
   color: #5b698a;
+  background-color: #e4e8f2;
 }
 
-section#who_are_we h2 {
+section.meet-the-team h1 {
   color: #24314f;
 }
 
-section#who_are_we .content {
+section.meet-the-team .text {
   width: 100%;
 }
 
-.team_wrapper {
+ul.team {
   margin-top: 30px;
 }
 
-.team_member {
+ul.team .executive {
   display: inline-block;
   width: 220px;
   height: 220px;
-  border-radius: 110px;
-  -webkit-border-radius: 110px;
-  -moz-border-radius: 110px;
   margin: 5px;
+  text-align: center;
+  -webkit-border-radius: 110px;
+     -moz-border-radius: 110px;
+          border-radius: 110px;
 }
 
-.team_member_name_wrapper {
+ul.team .executive .name {
+  line-height: 16px;
+  display: inline-block;
   margin-top: 185px;
-}
-
-.team_member_name {
-  color: #fff;
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  background: rgba(0, 0, 0, .6);
+  background-size: 220px 220px;
 }
 
 #anita {
@@ -330,25 +346,28 @@ section#who_are_we .content {
 }
 
 /* ==========================================================================
- *  Sponsors Section
- * ========================================================================== */
+   Meet the Team
+   ========================================================================== */
 
-section#sponsors {
+section.sponsors {
   padding: 10px 0;
-  background-color: #fff;
   text-align: center;
+  background-color: #fff;
+}
+
+section.sponsors img {
+  filter: alpha(opacity=50);
+  -moz-opacity:.5;
+  -khtml-opacity: .5;
+  opacity: .5;
 }
 
 #lining {
   width: 170px;
   margin-right: 40px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 
 #brownsports {
   width: 180px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 

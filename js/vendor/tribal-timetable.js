@@ -3,11 +3,11 @@
 // http://creativecommons.org/licenses/by-nc-sa/2.0/uk/ 
 //
 $(function () {
-    $('.timetable').resize(function (e) {
+    $('.js-timetable').resize(function (e) {
         $(this).resizeTimetable();
     });
     $(document).ready(function (e) {
-        $('.timetable').each(function (e) {
+        $('.js-timetable').each(function (e) {
             $(this).initialiseTT();
             $(this).resizeTimetable();
         });
@@ -17,7 +17,7 @@ $(function () {
         var daysArr = new Array(new Array(), new Array(), new Array(), new Array(), new Array(), new Array(), new Array());
 
         // create array to determine and calcuate position of clashing events
-        jQuery('.tt-event', this).each(function (i) {
+        jQuery('.event', this).each(function (i) {
             $(this).attr('rel', 'tooltip');
             $(this).attr('title', $(this).html().replace('<br/>', '\n'));
 
@@ -77,7 +77,7 @@ $(function () {
         }
 
         //loop again through events to set their heights and top offset
-        jQuery('.tt-event', this).each(function (i) {
+        jQuery('.event', this).each(function (i) {
             $(this).height(daysArr[$(this).data('day')][$(this).data('column')].last());
 
             var top = 0;
@@ -91,9 +91,9 @@ $(function () {
           html: true
         };
         jQuery("[rel=tooltip]", this).tooltip(options);
-        jQuery('.timetable', this).tooltip(options);
+        jQuery('.js-timetable', this).tooltip(options);
 
-        jQuery('.tt-day', this).each(function (i) {
+        jQuery('.day', this).each(function (i) {
             var height = 0;
             for (j = 0; j < daysArr[i].length; j++) {
                 height += daysArr[i][j].last() + 10;
@@ -107,39 +107,39 @@ $(function () {
     $.fn.resizeTimetable = function () {
         var tt = this;
         // reset day widths to allow for day names changing based on screen width
-        jQuery('.tt-day', this).width('auto');
-        jQuery('.tt-day', this).css('margin-right', 0);
+        jQuery('.day', this).width('auto');
+        jQuery('.day', this).css('margin-right', 0);
 
-        var ttDaysExtras = parseInt(jQuery('.tt-days', this).css('border-left-width')) + parseInt(jQuery('.tt-days', this).css('border-right-width')) + parseInt(jQuery('.tt-days', this).css('padding-left')) + parseInt(jQuery('.tt-days', this).css('padding-right'));
+        var ttDaysExtras = parseInt(jQuery('.days', this).css('border-left-width')) + parseInt(jQuery('.days', this).css('border-right-width')) + parseInt(jQuery('.days', this).css('padding-left')) + parseInt(jQuery('.days', this).css('padding-right'));
 
         // have to float left to get width correctly in IE8 and below
-        jQuery('.tt-days', this).css('float', 'left');
-        var daysWidth = jQuery('.tt-days', this).width() + ttDaysExtras;  // + border
-        jQuery('.tt-days', this).css('width', daysWidth + 'px');
-        jQuery('.tt-days', this).css('float', '');
-        var temp = jQuery('.tt-days', this).getHiddenDimensions();
-        jQuery('.tt-times', this).css('padding-left', daysWidth);
+        jQuery('.days', this).css('float', 'left');
+        var daysWidth = jQuery('.days', this).width() + ttDaysExtras;  // + border
+        jQuery('.days', this).css('width', daysWidth + 'px');
+        jQuery('.days', this).css('float', '');
+        var temp = jQuery('.days', this).getHiddenDimensions();
+        jQuery('.times', this).css('padding-left', daysWidth);
 
-        var ttTimesExtras = parseInt(jQuery('.tt-times', this).css('border-top-width')) + parseInt(jQuery('.tt-times', this).css('border-bottom-width')) + parseInt(jQuery('.tt-times', this).css('padding-top')) + parseInt(jQuery('.tt-times', this).css('padding-bottom'));
-        var ttTimeExtras = parseInt(jQuery('.tt-time', this).last().css('padding-bottom')) + parseInt(jQuery('.tt-time', this).last().css('padding-top'));
-        var tempWidth = jQuery('.tt-time', this).last().width();
-        jQuery('.tt-time', this).last().width(0);
-        var timesHeight = jQuery('.tt-times', this).height() + ttTimesExtras; // + border
-        jQuery('.tt-time', this).last().width(tempWidth);
+        var ttTimesExtras = parseInt(jQuery('.times', this).css('border-top-width')) + parseInt(jQuery('.times', this).css('border-bottom-width')) + parseInt(jQuery('.times', this).css('padding-top')) + parseInt(jQuery('.times', this).css('padding-bottom'));
+        var ttTimeExtras = parseInt(jQuery('.time', this).last().css('padding-bottom')) + parseInt(jQuery('.time', this).last().css('padding-top'));
+        var tempWidth = jQuery('.time', this).last().width();
+        jQuery('.time', this).last().width(0);
+        var timesHeight = jQuery('.times', this).height() + ttTimesExtras; // + border
+        jQuery('.time', this).last().width(tempWidth);
 
-        jQuery('.tt-days', this).css('top', (timesHeight) + 'px');
+        jQuery('.days', this).css('top', (timesHeight) + 'px');
 
-        $(this).height((timesHeight + jQuery('.tt-days', this).height()) + 'px');
+        $(this).height((timesHeight + jQuery('.days', this).height()) + 'px');
 
-        jQuery('.tt-events', this).css('left', daysWidth);
-        jQuery('.tt-events', this).css('top', timesHeight);
+        jQuery('.events', this).css('left', daysWidth);
+        jQuery('.events', this).css('top', timesHeight);
         /* check why different between height and width - times/days */
         var ttWidth = $(this).width();
-        var width = $(this).width() - jQuery('.tt-days', this).width() - ttDaysExtras;
+        var width = $(this).width() - jQuery('.days', this).width() - ttDaysExtras;
         var height = $(this).height();
         var hours = $(this).data('hours');
         var hourWidth = Math.floor(width / hours);
-        var timeWidth = hourWidth - parseInt(jQuery('.tt-time', this).first().css('padding-left')) - parseInt(jQuery('.tt-time', this).first().css('padding-right')) - parseInt(jQuery('.tt-time', this).first().css('border-left-width')) - parseInt(jQuery('.tt-time', this).first().css('border-right-width'));
+        var timeWidth = hourWidth - parseInt(jQuery('.time', this).first().css('padding-left')) - parseInt(jQuery('.time', this).first().css('padding-right')) - parseInt(jQuery('.time', this).first().css('border-left-width')) - parseInt(jQuery('.time', this).first().css('border-right-width'));
         var widthLeft = width;
         var timeHeight = height - ttTimesExtras - ttTimeExtras;
         var timeMarginBottom = -1 * timeHeight;
@@ -148,7 +148,7 @@ $(function () {
         var dayYOffset = new Array();
 
         // set sizes of the times
-        jQuery('.tt-time', this).each(function (i) {
+        jQuery('.time', this).each(function (i) {
             if (i < hours - 1) {
                 $(this).width(timeWidth);
                 $(this).height(timeHeight);
@@ -161,7 +161,7 @@ $(function () {
         });
 
         // set day sizes
-        jQuery('.tt-day', this).each(function (i) {
+        jQuery('.day', this).each(function (i) {
             var dayWidth = ttWidth - ttDaysExtras - parseInt($(this).css('padding-left')) - parseInt($(this).css('padding-right'));
             $(this).width(dayWidth);
             $(this).css('margin-right', -1 * width);
@@ -174,7 +174,7 @@ $(function () {
             }
         });
 
-        jQuery('.tt-event', this).each(function (i) {
+        jQuery('.event', this).each(function (i) {
             var eventStart = $(this).data('start') * hourWidth;
             var eventWidth = Math.max($(this).data('duration') * hourWidth - 9, 1);
             var eventDay = $(this).data('day');
