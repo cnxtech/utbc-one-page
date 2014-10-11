@@ -346,7 +346,7 @@ ul.team .executive .name {
 }
 
 /* ==========================================================================
-   Meet the Team
+   Sponsors
    ========================================================================== */
 
 section.sponsors {
@@ -369,5 +369,11 @@ section.sponsors img {
 
 #brownsports {
   width: 180px;
+}
+
+section.sponsors div {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
 }
 
